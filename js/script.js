@@ -3,9 +3,9 @@ const displayText = document.getElementById('display-text');
 
 // Функция debounce 
 function debounce(fn, delay) {
-    var timer = null;
+    let timer = null;
     return function () {
-        var context = this, args = arguments;
+        const context = this, args = arguments;
         clearTimeout(timer);
         timer = setTimeout(function () {
             fn.apply(context, args);
